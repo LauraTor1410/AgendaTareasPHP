@@ -1,4 +1,4 @@
-// registro.php
+
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre_usuario = $_POST['nombre_usuario'];
@@ -24,12 +24,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Registro</title>
 </head>
 <body>
-    <fieldset>
+    <fieldset id="registro">
         <legend>Registro de usuario</legend>
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-            Nombre de usuario: <input type="text" name="nombre_usuario"><br>
-            Contraseña: <input type="password" name="contrasena"><br>
-            <input type="submit" value="Registrar">
+            <label for="nombre_usuario">Nombre de usuario:</label>
+            <input type="text" name="nombre_usuario"><br>
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" name="contrasena"><br>
+            <button type="submit">Registrar</button>
         </form>
     </fieldset>
     
