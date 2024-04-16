@@ -1,0 +1,60 @@
+body{
+    background-color: rgb(233, 117, 136);  
+}
+
+h1{
+    text-align: center;
+}
+
+label{
+    color:blue;
+}
+
+fieldset#nuevaTarea{
+    color: white;
+    border: solid 2px grey;
+    width: 500px;
+    margin: 0 auto;
+}
+
+input#tarea{
+    margin-left: 50px;
+}
+
+fieldset#listaTarea{
+    color: blue;
+    border: solid 2px grey;
+    width: 500px;
+    margin: 0 auto;
+}
+
+fieldset#accionesTarea{
+    color: blue;
+    border: solid 2px grey;
+    width: 500px;
+    margin: 0 auto;
+}
+
+legend{
+    color: black;
+    
+    padding: 3px;
+}
+
+table{
+    text-align: center;
+    color:black;
+    width: 100%;
+}
+
+.botonEnviar{
+    color: blue;
+}
+
+.botonReset{
+    color:green;
+}
+
+.botonBorrar{
+    color: red;
+}
