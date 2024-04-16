@@ -17,6 +17,70 @@ fieldset#nuevaTarea{
     margin: 0 auto;
 }
 
+fieldset#registro{
+     color: white;
+    border: solid 2px grey;
+    width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.btnRegistro {
+    display: inline-block;
+    padding: 1px 50px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 2px
+        
+}
+#registro button{
+    background-color: black;
+    color: white;
+    width: 200px;
+    height: 25px;
+    border-radius: 5px 
+}
+
+#registro input{
+    display: flex;
+    height: 20px;
+}
+
+#registro label{
+    color: white;
+}
+
+#inicioS input{
+    display: flex;
+    height: 20px;
+}
+
+#inicioS label{
+    color: white;
+}
+
+.btnInicio{
+    background-color: black;
+    color: white;
+    width: 200px;
+    height: 25px;
+    border-radius: 5px
+}
+
+.btnRegistro:hover {
+    background-color: #45a049;
+}
+fieldset#inicioS{
+    color: white;
+    border: solid 2px grey;
+    width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
 input#tarea{
     margin-left: 50px;
 }
