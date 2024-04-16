@@ -38,14 +38,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Iniciar sesión</title>
 </head>
 <body>
-    <fieldset>
+    <fieldset id="inicioS">
         <legend>Iniciar sesión</legend>
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-            Nombre de usuario: <input type="text" name="nombre_usuario"><br>
-            Contraseña: <input type="password" name="contrasena"><br>
-            <input type="submit" value="Iniciar sesión">
+            <label for="nombre_usuario">Nombre de usuario:</label>
+            <input type="text" name="nombre_usuario">
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" name="contrasena"><br>
+            <button type="submit" class="btnInicio">Iniciar sesión</button>
+            <a href="registro.php" class="btnRegistro">Registrarse</a>
         </form>
-        <a href="registro.php">Registrarse</a>
+         
         <?php if(isset($mensaje_error)) echo $mensaje_error; ?>
     </fieldset>
 </body>
