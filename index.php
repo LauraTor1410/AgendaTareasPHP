@@ -15,40 +15,42 @@ if (!isset($_SESSION['nombre_usuario'])) {
         <title>Agenda de Tareas</title>
     </head>
     <body>
-        <h1>Agenda de Tareas</h1>
-        <form method="POST" action="<?= $_SERVER['PHP_SELF']?>" >
-            
-            <fieldset id="nuevaTarea">
-                <legend>Nueva Tarea:</legend>
-                <label for="tarea">Tarea:</label>
-                <input type="text" name="tarea" id="tarea"/>
+        <main>
+            <h1>Agenda de Tareas</h1>
+            <form method="POST" action="<?= $_SERVER['PHP_SELF']?>" >
+                
+                <fieldset id="nuevaTarea">
+                    <legend>Nueva Tarea:</legend>
+                    <label for="tarea">Tarea:</label>
+                    <input type="text" name="tarea" id="tarea"/>
+                    <?php
+                        //Si pulsamos añadir pero esta vacio
+                        if(isset($_POST['añadir']) && empty($_POST['tarea'])){
+                            echo $tareavacia;
+                        }
+                    ?>
+                    <br>
+                    <br>
+                    <button type="submit" name="añadir" class="botonEnviar">Añadir Tarea</button>
+                    <button type="reset" class="botonReset">Limpiar Campos</button>  
+                </fieldset>           
+                <br>
                 <?php
-                    //Si pulsamos añadir pero esta vacio
-                    if(isset($_POST['añadir']) && empty($_POST['tarea'])){
-                        echo $tareavacia;
-                    }
+                    //Incluimos el listado de tareas
+                    include_once('listado_tareas.php');
                 ?>
                 <br>
                 <br>
-                <button type="submit" name="añadir" class="botonEnviar">Añadir Tarea</button>
-                <button type="reset" class="botonReset">Limpiar Campos</button>  
-            </fieldset>           
-            <br>
-            <?php
-                //Incluimos el listado de tareas
-                include_once('listado_tareas.php');
-            ?>
-            <br>
-            <br>
-            <fieldset id="accionesTarea">
-                <label for="selecTarea">Num Tarea:</label>
-                <input type="number" name="selecTarea" min="1" max="<?= count($listado) ?>"/>
-                <input type="submit" name="completarTarea" class="botonEnviar" value="Tarea Completada"> 
-                <input type="submit" name="borrarTarea" class="botonEnviar" value="Tarea Borrada"/>
-                <br>
-                <input type="submit" name="vaciar" class="botonBorrar" formmethod="GET" value="Vaciar Agenda"/>
-               
-            </fieldset>
-        </form>
+                <fieldset id="accionesTarea">
+                    <label for="selecTarea">Num Tarea:</label>
+                    <input type="number" name="selecTarea" min="1" max="<?= count($listado) ?>"/>
+                    <input type="submit" name="completarTarea" class="botonEnviar" value="Tarea Completada"> 
+                    <input type="submit" name="borrarTarea" class="botonEnviar" value="Tarea Borrada"/>
+                    <br>
+                    <input type="submit" name="vaciar" class="botonBorrar" formmethod="GET" value="Vaciar Agenda"/>
+                
+                </fieldset>
+            </form>
+        </main>
     </body>
 </html>

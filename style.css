@@ -1,124 +1,135 @@
-body{
-    background-color: rgb(233, 117, 136);  
-}
+/* Importar fuente de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-h1{
-    text-align: center;
-}
-
-label{
-    color:blue;
-}
-
-fieldset#nuevaTarea{
-    color: white;
-    border: solid 2px grey;
-    width: 500px;
-    margin: 0 auto;
-}
-
-fieldset#registro{
-     color: white;
-    border: solid 2px grey;
-    width: 500px;
-    margin: 0 auto;
+/* Estilo general del cuerpo */
+body {
+    background-color: #f0f2f5;  
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
-}
-.btnRegistro {
-    display: inline-block;
-    padding: 1px 50px;
-    background-color: black;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    margin: 2px
-        
-}
-#registro button{
-    background-color: black;
-    color: white;
-    width: 200px;
-    height: 25px;
-    border-radius: 5px 
+    align-items: center;
+    height: 100vh;
 }
 
-#registro input{
-    display: flex;
-    height: 20px;
-}
-
-#registro label{
-    color: white;
-}
-
-#inicioS input{
-    display: flex;
-    height: 20px;
-}
-
-#inicioS label{
-    color: white;
-}
-
-.btnInicio{
-    background-color: black;
-    color: white;
-    width: 200px;
-    height: 25px;
-    border-radius: 5px
-}
-
-.btnRegistro:hover {
-    background-color: #45a049;
-}
-fieldset#inicioS{
-    color: white;
-    border: solid 2px grey;
-    width: 500px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-}
-
-input#tarea{
-    margin-left: 50px;
-}
-
-fieldset#listaTarea{
-    color: blue;
-    border: solid 2px grey;
-    width: 500px;
-    margin: 0 auto;
-}
-
-fieldset#accionesTarea{
-    color: blue;
-    border: solid 2px grey;
-    width: 500px;
-    margin: 0 auto;
-}
-
-legend{
-    color: black;
-    
-    padding: 3px;
-}
-
-table{
+/* Estilo del encabezado */
+h1 {
     text-align: center;
-    color:black;
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* Estilo de los labels */
+label {
+    color: #333;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+/* Estilo de los fieldsets */
+fieldset {
+    background-color: #fff;
+    border: solid 2px #00ff3c;
+    border-radius: 10px;
+    padding: 20px;
     width: 100%;
+    max-width: 500px;
+    margin: 10px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.botonEnviar{
-    color: blue;
+/* Estilo específico para los fieldsets */
+fieldset#nuevaTarea, fieldset#accionesTarea {
+    margin-top: 20px;
 }
 
-.botonReset{
-    color:green;
+/* Estilo de las leyendas */
+legend {
+    color: #028202;
+    padding: 5px;
+    font-size: 1.2em;
+    font-weight: 700;
 }
 
-.botonBorrar{
-    color: red;
+/* Estilo de las entradas de texto y números */
+input[type="text"], input[type="number"], input[type="password"]  {
+    width: calc(100% - 22px); 
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de los botones */
+button, input[type="submit"] {
+    background-color: #39dc57;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 10px 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #0e832b;
+    transform: scale(1.05);
+}
+
+button[type="reset"] {
+    background-color: #dc3545;
+}
+
+button[type="reset"]:hover {
+    background-color: #c82333;
+}
+
+.botonBorrar {
+    background-color: #ffc107;
+    color: white;
+}
+
+.botonBorrar:hover {
+    background-color: #e0a800;
+}
+
+/* Estilo de las tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+}
+
+td {
+    text-align: center;
+}
+
+/* Centrado del contenido principal */
+main {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }

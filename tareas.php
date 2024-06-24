@@ -14,7 +14,7 @@
     // si se introduce una tarea y no esta vacia 
     if(!empty($_POST['tarea'])){
         //La saneamos y la introducimos en el listado
-        $nuevatarea = filter_input(INPUT_POST, 'tarea', FILTER_SANATIZE_STRING);
+        $nuevatarea = filter_input(INPUT_POST, 'tarea', FILTER_SANITIZE_STRING);
         $listado[]=[
             "nombre"=>$nuevatarea,
             "estado"=>"No"
